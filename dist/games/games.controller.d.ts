@@ -7,11 +7,11 @@ export declare class GamesController {
     private readonly notFound;
     create(createGameDto: CreateGameDto): import(".prisma/client").Prisma.Prisma__GameClient<import(".prisma/client").Game>;
     findAll(): import(".prisma/client").PrismaPromise<(import(".prisma/client").Game & {
-        favorites: (import(".prisma/client").GamesOnProfiles & {
-            profile: import(".prisma/client").Profile;
-        })[];
         genres: (import(".prisma/client").GenresOnGames & {
             genre: import(".prisma/client").Genre;
+        })[];
+        favorites: (import(".prisma/client").GamesOnProfiles & {
+            profile: import(".prisma/client").Profile;
         })[];
     })[]>;
     findOne(id: string): Promise<import(".prisma/client").Game>;
